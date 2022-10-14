@@ -1,0 +1,59 @@
+@import "../../Helpers/variables";
+
+button {
+  display: inline-block;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  transition: background-color $hoverTransition, color $hoverTransition;
+}
+
+.primary {
+  background-color: transparent;
+  color: $mainColor;
+  border: 2px solid $mainColor;
+  &:hover {
+    color: #fff;
+    background-color: $mainColor;
+  }
+}
+.secondary {
+  background-color: transparent;
+  color: $secondaryBtn;
+  border: 1px solid $secondaryBtn;
+  &:hover {
+    color: #fff;
+    background-color: $secondaryBtn;
+  }
+}
+.danger {
+  background-color: transparent;
+  color: $dangerBtn;
+  border: 1px solid $dangerBtn;
+  &:hover {
+    color: #fff;
+    background-color: $dangerBtn;
+  }
+}
+.warning {
+  background-color: transparent;
+  color: $warningBtn;
+  border: 1px solid $warningBtn;
+  &:hover {
+    color: #fff;
+    background-color: $warningBtn;
+  }
+}
+.success {
+  background-color: transparent;
+  color: $successBtn;
+  border: 1px solid $successBtn;
+  &:hover {
+    color: #fff;
+    background-color: $successBtn;
+  }
+}

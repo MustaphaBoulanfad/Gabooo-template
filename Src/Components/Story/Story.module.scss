@@ -1,0 +1,71 @@
+@import "../../Helpers/mixins";
+@import "../../Helpers/variables";
+
+section.story {
+  background-color: $backColorSecondary;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .image {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    .img {
+      width: 100%;
+      height: 300px;
+      background-color: gray;
+    }
+  }
+  .storyContainer {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    height: 450px;
+    padding: $sectionPadding 0;
+    .story {
+      h2 {
+        font-weight: 400;
+        margin-bottom: 15px;
+      }
+      span {
+        margin-bottom: 15px;
+        display: inline-block;
+        padding: 2px 20px;
+        font-size: 19px;
+        font-weight: 600;
+        border: 3px solid $mainColor;
+        color: $mainColor;
+        cursor: pointer;
+      }
+      p {
+        color: $paragraphColor;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  @include mediaQuery("small") {
+    .storyContainer {
+      height: 360px;
+    }
+  }
+  @include mediaQuery("meduim") {
+    flex-direction: row;
+    gap: 60px;
+    .image .img {
+      height: 500px;
+    }
+    .storyContainer {
+      padding: $sectionPadding 60px $sectionPadding 0;
+    }
+  }
+  @include mediaQuery("large") {
+    .image .img {
+      height: 400px;
+    }
+    .storyContainer {
+      padding: $sectionPadding 40px $sectionPadding 0;
+    }
+  }
+}

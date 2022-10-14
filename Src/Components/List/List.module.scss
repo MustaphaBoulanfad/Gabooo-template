@@ -1,0 +1,76 @@
+@import "../../Helpers/mixins";
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  li {
+    cursor: pointer;
+  }
+
+  &.dark li a {
+    color: #000;
+  }
+  &.light li a {
+    color: #fff;
+  }
+  &.row {
+    flex-direction: row;
+  }
+  &.column {
+    flex-direction: column;
+  }
+  &.center {
+    justify-content: center;
+  }
+  &.left li {
+    margin-right: 10px !important;
+    @include mediaQuery("meduim") {
+      margin-right: 30px !important;
+    }
+  }
+  &.right li {
+    margin-left: 10px !important;
+    @include mediaQuery("meduim") {
+      margin-left: 30px !important;
+    }
+  }
+  &.small-left li {
+    margin-right: 5px !important;
+    @include mediaQuery("meduim") {
+      margin-right: 15px !important;
+    }
+  }
+  &.small-right li {
+    margin-left: 5px !important;
+    @include mediaQuery("meduim") {
+      margin-left: 15px !important;
+    }
+  }
+
+  &.top li {
+    margin-top: 10px !important;
+    @include mediaQuery("meduim") {
+      margin-top: 30px !important;
+    }
+  }
+  &.bottom li {
+    margin-bottom: 10px !important;
+    @include mediaQuery("meduim") {
+      margin-bottom: 30px !important;
+    }
+  }
+  &.small-top li {
+    margin-top: 5px !important;
+    @include mediaQuery("meduim") {
+      margin-top: 15px !important;
+    }
+  }
+  &.small-bottom li {
+    margin-bottom: 5px !important;
+    @include mediaQuery("meduim") {
+      margin-bottom: 15px !important;
+    }
+  }
+}

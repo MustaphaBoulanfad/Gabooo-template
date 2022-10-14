@@ -1,0 +1,36 @@
+@import "../../Helpers/mixins";
+@import "../../Helpers/variables";
+
+section.similar {
+  padding: $sectionPadding 0;
+  .similarContainer {
+    h1 {
+      color: $mainColor;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 25px;
+      letter-spacing: 1.6px;
+    }
+  }
+  .itemsContainer {
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @include mediaQuery("small") {
+    h1 {
+      font-size: 35px;
+    }
+    ul li {
+      padding: 10px 25px;
+    }
+    .itemsContainer {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}

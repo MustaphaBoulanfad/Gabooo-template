@@ -1,0 +1,106 @@
+@import "../../../Helpers/mixins";
+@import "../../../Helpers/variables";
+
+.contactHeader {
+  background-color: $backColorPrimary;
+  height: 65px;
+  color: #fff;
+  font-size: 15px;
+  .contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    .info {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        cursor: pointer;
+        p {
+          margin-right: 5px;
+        }
+        svg {
+          font-size: 23px;
+          opacity: 1;
+        }
+      }
+    }
+    .socialMedia {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 40px;
+        svg {
+          margin-right: 5px;
+          cursor: pointer;
+        }
+      }
+      .actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          margin-left: 15px;
+          border-radius: 7px;
+          color: #fff;
+        }
+      }
+    }
+  }
+  @include mediaQuery("meduim") {
+    height: 40px;
+    .contactContainer {
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 17px;
+      .info {
+        width: fit-content;
+        div {
+          margin-right: 25px;
+          svg {
+            opacity: 0;
+            transition: opacity $hoverTransition;
+          }
+          &:hover svg {
+            opacity: 1;
+          }
+          &:active svg {
+            color: $successBtn;
+          }
+        }
+      }
+      .socialMedia {
+        width: fit-content;
+        svg {
+          margin-right: 0;
+          margin-left: 10px;
+          transition: color $hoverTransition;
+          &:hover {
+            color: $mainColor;
+          }
+        }
+        a {
+          padding: 0 15px;
+          margin: 0 5px;
+          background-color: transparent;
+          transition: background-color $hoverTransition;
+          &:hover {
+            background-color: $mainColor;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@import "../../Helpers/mixins";
+@import "../../Helpers/variables";
+footer {
+  background-color: $backColorPrimary;
+  padding: $sectionPadding 0;
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .about {
+      width: 100%;
+      > span {
+        margin-bottom: 15px;
+        display: inline-block;
+        padding: 2px 20px;
+        font-size: 19px;
+        font-weight: 600;
+        border: 3px solid $mainColor;
+        color: $mainColor;
+        cursor: pointer;
+      }
+      p {
+        color: $paragraphColorLight;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        span {
+          color: $mainColor;
+        }
+      }
+    }
+    .links {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .list {
+        h3 {
+          color: $paragraphColorLight;
+          margin-bottom: 15px;
+        }
+        text-align: left;
+        ul {
+          font-size: 16px;
+          align-items: unset;
+        }
+      }
+      @include mediaQuery("small") {
+        justify-content: center;
+        gap: 100px;
+      }
+    }
+    .contact {
+      width: 100%;
+      h3 {
+        color: $paragraphColorLight;
+        margin-bottom: 15px;
+      }
+      > p {
+        color: $paragraphColorLight;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .email {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+        border: 1px solid $mainColor;
+        color: $paragraphColorLight;
+        padding: 4px 0;
+      }
+      .icons {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        color: $paragraphColorLight;
+        padding: 4px 0;
+        svg {
+          margin: 0 10px;
+          cursor: pointer;
+          transition: color $hoverTransition;
+          &:hover {
+            color: $mainColor;
+          }
+        }
+      }
+    }
+    @include mediaQuery("meduim") {
+      flex-direction: row;
+      align-items: unset;
+      gap: 20px;
+    }
+  }
+}
